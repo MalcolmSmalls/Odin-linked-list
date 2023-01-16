@@ -64,6 +64,19 @@ class LinkedList {
         console.log(current.value)
     }
 
+    pop(){
+        let current
+        for(let i = 0; i < this.length-1; i++){
+            if(i === 0){
+                current = this.head
+            }else{
+                current = current.next
+            }
+
+        }
+        current.next = null
+        this.length--
+    }
     insertAt(value, index){
         let node = new Node(value)
         let current
@@ -107,8 +120,9 @@ linko.append(500)
 
 
 linko.insertAt(300,2)
-
+linko.pop()
 linko.toString()
+linko.size()
 // linko.at(1)
 
 
