@@ -44,6 +44,14 @@ class LinkedList {
         console.log(this.head.value)
     }
 
+    getTail(){
+        let current = this.head
+        while(current.next){
+            current = current.next
+        }
+        console.log(current.value)
+    }
+
     insertAt(value, index){
         let node = new Node(value)
         let current
@@ -89,7 +97,7 @@ linko.append(500)
 linko.insertAt(300,2)
 
 // linko.toString()
-linko.getHead()
+linko.getTail()
 // console.log(linko)
 
 
