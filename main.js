@@ -78,6 +78,7 @@ class LinkedList {
         this.length--
     }
 
+
     contains(value){
         let current
         for(let i = 0; i < this.length; i++){
@@ -91,6 +92,21 @@ class LinkedList {
                 return true
             }else{
                 return false
+            }
+        }
+    }
+
+    find(value){
+        let current
+        for(let i=0; i < this.length; i++){
+            if(i === 0){
+                current = this.head
+            } else {
+                current = current.next
+            }
+
+            if(current.value === value){
+                return i
             }
         }
     }
@@ -139,10 +155,11 @@ linko.append(500)
 
 linko.insertAt(300,2)
 linko.pop()
-// linko.toString()
+linko.toString()
 // linko.size()
 
-console.log(linko.contains(1000))
+console.log(linko.find(400))
+
 // linko.at(1)
 
 
