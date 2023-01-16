@@ -52,18 +52,30 @@ class LinkedList {
         console.log(current.value)
     }
 
+    at(index){
+        let current
+        for(let i = 0; i <= index; i++){
+            if(i === 0){
+                current = this.head
+            }else{
+                current = current.next
+            }
+        }
+        console.log(current.value)
+    }
+
     insertAt(value, index){
         let node = new Node(value)
         let current
         let nodeHolder = this.head
 
-        for(let i = 1; i <= index; i++){
+        for(let i = 0; i < index; i++){
             nodeHolder = nodeHolder.next
 
         }
 
-        for(let i = 1; i <= index; i++){
-            if(i===1){
+        for(let i = 0; i < index; i++){
+            if(i===0){
                 current = this.head
             }else{
                 current = current.next
@@ -96,9 +108,8 @@ linko.append(500)
 
 linko.insertAt(300,2)
 
-// linko.toString()
-linko.getTail()
-// console.log(linko)
+linko.toString()
+// linko.at(1)
 
 
 
