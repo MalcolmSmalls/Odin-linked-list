@@ -9,14 +9,14 @@ class Node {
 class LinkedList {
     constructor(){
         this.head = null
-        this.size = 0
+        this.length = 0
     }
 
 
 
     prepend(value){
         this.head = new Node(value, this.head)
-        this.size++
+        this.length++
     }
 
     append(value){
@@ -33,7 +33,11 @@ class LinkedList {
             current.next = node
         }
 
-        this.size++
+        this.length++
+    }
+
+    size(){
+        console.log(this.length)
     }
 
     insertAt(value, index){
@@ -55,7 +59,7 @@ class LinkedList {
         }
         node.next = nodeHolder
         current.next = node
-    
+        this.length++
 
     }
 
@@ -80,7 +84,8 @@ linko.append(500)
 
 linko.insertAt(300,2)
 
-linko.toString()
+// linko.toString()
+linko.size()
 
 // console.log(linko)
 
