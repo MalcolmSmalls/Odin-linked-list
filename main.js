@@ -40,6 +40,10 @@ class LinkedList {
         console.log(this.length)
     }
 
+    getHead(){
+        console.log(this.head.value)
+    }
+
     insertAt(value, index){
         let node = new Node(value)
         let current
@@ -85,8 +89,7 @@ linko.append(500)
 linko.insertAt(300,2)
 
 // linko.toString()
-linko.size()
-
+linko.getHead()
 // console.log(linko)
 
 
