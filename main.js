@@ -77,6 +77,24 @@ class LinkedList {
         current.next = null
         this.length--
     }
+
+    contains(value){
+        let current
+        for(let i = 0; i < this.length; i++){
+            if(i === 0){
+                current = this.head
+            }else{
+                current = current.next
+            } 
+            
+            if(current.value === value){
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+
     insertAt(value, index){
         let node = new Node(value)
         let current
@@ -121,8 +139,10 @@ linko.append(500)
 
 linko.insertAt(300,2)
 linko.pop()
-linko.toString()
-linko.size()
+// linko.toString()
+// linko.size()
+
+console.log(linko.contains(1000))
 // linko.at(1)
 
 
