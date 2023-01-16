@@ -36,6 +36,29 @@ class LinkedList {
         this.size++
     }
 
+    insertAt(value, index){
+        let node = new Node(value)
+        let current
+        let nodeHolder = this.head
+
+        for(let i = 1; i <= index; i++){
+            nodeHolder = nodeHolder.next
+
+        }
+
+        for(let i = 1; i <= index; i++){
+            if(i===1){
+                current = this.head
+            }else{
+                current = current.next
+            }
+        }
+        node.next = nodeHolder
+        current.next = node
+    
+
+    }
+
     toString(){
         let current = this.head
         while(current){
@@ -49,9 +72,17 @@ class LinkedList {
 const linko = new LinkedList()
 
 
-linko.prepend(10)
+linko.prepend(100)
 linko.append(200)
+linko.append(400)
+linko.append(500)
 
-console.log(linko)
+
+linko.insertAt(300,2)
 
 linko.toString()
+
+// console.log(linko)
+
+
+
